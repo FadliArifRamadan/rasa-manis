@@ -461,6 +461,14 @@ footer .credit a {
     .contact .row form {
         padding-top: 0;
     }
+
+    .landing .content h1 {
+        width: 30rem;
+    }
+
+    .landing .content p {
+        font-size: 1.4rem;
+    }
 }
 
 /* Mobile Phone */
