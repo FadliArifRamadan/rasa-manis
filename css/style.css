@@ -192,14 +192,16 @@ body {
   min-height: 100vh;
 }
 
-.about h2 {
+.about h2,
+.menu-kami h2 {
   color: #fff;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .about .row {
+  margin-top: 3rem;
   display: flex;
 }
 
@@ -254,8 +256,7 @@ body {
   font-size: 1.2rem;
 }
 
-.service .row,
-.menu-kami .row {
+.service .row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -279,6 +280,13 @@ body {
 }
 
 /* Section Menu */
+.menu-kami .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
 .menu-kami .introduction {
   color: #fff;
   text-align: center;
@@ -289,30 +297,68 @@ body {
   font-size: 1.2rem;
 }
 
-.menu-kami h2 {
+.menu-kami .menu-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+.menu-kami .menu-card-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu-kami .menu-card-icons a {
+  width: 3.5rem;
+  height: 3.5rem;
   color: #fff;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-kami .row .menu-card {
-  width: 18.8rem;
-  text-align: center;
-  box-shadow: 0 0 1.9rem rgba(0, 0, 0, 0.452);
-  border-radius: 0.63rem;
-  padding-top: 1.9rem;
-  padding-bottom: 1.3rem;
-  background-color: #fff;
+.menu-kami .menu-card-icons a:hover {
+  background-color: var(--warna2);
+  border: 1px solid var(--warna2);
 }
 
-.menu-kami .row .menu-card .menu-card-title {
+.menu-kami .menu-card-image {
+  padding: 1rem 0;
+}
+
+.menu-kami .menu-card-image img {
+  height: 25rem;
+}
+
+.menu-kami .menu-card-content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.menu-kami .menu-card-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
   color: var(--warna2);
 }
 
-.menu-kami .row .menu-card .menu-card-price {
+.menu-kami .menu-card-stars .star-full {
+  fill: var(--warna2);
+}
+
+.menu-kami .menu-card-price {
   font-size: 1.2rem;
-  color: var(--warna1);
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-kami .menu-card-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
 }
 
 /* Contatc Section */
@@ -463,23 +509,16 @@ footer .credit a {
     font-size: 1.2rem;
   }
 
-  .service .introduction,
-  .menu-kami .introduction {
+  .service .introduction {
     font-size: 1.2rem;
   }
 
-  .service .row .service-card .service-card-title,
-  .menu-kami .row .menu-card .menu-card-title {
+  .service .row .service-card .service-card-title {
     font-size: 1.2rem;
   }
 
-  .service .row .service-card .description,
-  .menu-kami .row .menu-card .menu-card-price {
+  .service .row .service-card .description {
     font-size: 1.2rem;
-  }
-
-  .menu-kami .row .menu-card {
-    width: 20rem;
   }
 
   .contact .row {
